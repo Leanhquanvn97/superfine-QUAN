@@ -1,0 +1,68 @@
+header {
+    background-color: $primary-color;
+    color: white;
+    min-height: 70px;
+    padding-block: 18px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    transition: all 0.3s linear;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+
+    .Header { 
+        &-Logo {
+            font-weight: 600;
+            font-size: 32px;
+            margin-inline-end: 30px;
+
+        }
+
+        &-Tabs, &-Login {
+            font-weight: 400;
+            font-size: 18px;
+            display: flex;
+            gap: 26px;
+        }
+
+        &-Tabs {
+            display: none;
+
+            @include tablet {
+                display: flex;
+            }
+        }
+    }
+
+    div, p {
+        display: flex;
+        align-items: center;
+    }
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 20px;
+
+        @include desktop {
+            padding-inline: 50px;
+        }
+    }
+
+    p {
+        opacity: 0.8;
+    }
+
+    &.hide {
+        transform: translateY(-100%);
+    }
+
+    &.mini {
+        padding-block: 10px 0px;
+
+        @include desktop {
+            padding-block: 20px 10px;
+        }
+    }
+}

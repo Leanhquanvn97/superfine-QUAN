@@ -1,0 +1,101 @@
+.HeroBanner {
+    .HeroSlide {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        img {
+            max-height: 300px;
+            height: 100%;
+            width: 100%;
+
+            @include tablet {
+                max-height: unset;
+                max-width: 50vw;
+            }
+        }
+
+        > div {
+            flex: 1;
+        }
+
+        &-Wrapper {
+            text-align: left;
+            padding-inline-start: 16px;
+
+            @include tablet {
+                padding-inline-start: 10%;
+            }
+        }
+
+        .Slide-Wrapper {
+            display: flex;
+            gap: 28px;
+        }
+
+        &-Button {
+            width: 100%;
+
+            @include tablet {
+                padding-inline-start: 10%;
+            }
+        }
+    }
+
+    .host-text {
+        color: $host-text-color;
+        font-style: italic;
+        margin-block-end: 24px;
+    }
+
+    .action-text {
+        font-style: italic;
+        color: #bfbfc1;
+    }
+
+    .join-text {
+        display: flex;
+        flex-direction: column;
+        color: #bfbfc1;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 32px;
+    }
+
+    .action-wrapper {
+        display: flex;
+        gap: 10px;
+    }
+
+    .action-number {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    button {
+        margin-block: 20px;
+        padding: 6px 16px;
+        color: white;
+        font-size: 24px;
+        background-image: linear-gradient(to right, #5357f6,  #9f65eb); /* your gradient here */
+    }
+
+    .time-number {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time-text {
+        display: flex;
+        gap: 10px;
+    }
+
+    span {
+        color: #bfbfc1;
+    }
+}

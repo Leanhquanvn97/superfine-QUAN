@@ -5,12 +5,14 @@ import 'slick-carousel/slick/slick-theme.css';
 import './root.scss';
 import HeroBanner from '../components/HeroBanner/HeroBanner';
 import GameCards from '../components/GameCards/GameCards';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 const IndexPage = () => {
     return (
         <>
             <Header/>
             <main>
+                <SearchBar/>
                 <HeroBanner/>
                 <GameCards isJam/>
                 <GameCards/>

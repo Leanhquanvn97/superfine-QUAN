@@ -1,0 +1,21 @@
+.SearchBar {
+    padding-inline: 16px;
+    background-color: $primary-background-color;
+
+    @include tablet {
+        display: flex;
+        justify-content: end;
+        padding-inline: 52px;
+    }
+
+    input {
+        border-radius: 25px;
+        height: 30px;
+        padding-inline-start: 10px;
+        margin-block-end: 20px;
+        margin-inline-end: 16px;
+        background-color: $primary-color;
+        border: 0;
+        width: 200px;
+    }
+}
