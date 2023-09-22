@@ -5,6 +5,10 @@ const useScrollDirection = () => {
     const [show, setShow] = useState('show');
 
     useEffect(() => {
+        if(!window) {
+            return;
+        }
+        
         let previousScrollPosition = 0;
         let currentScrollPosition = 0;
 
