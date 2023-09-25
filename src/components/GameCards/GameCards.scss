@@ -124,4 +124,26 @@
     .slick-slider {
         width: 100%;
     }
+
+    > button {
+        @include tablet {
+            margin-inline-end: 16px;
+        }
+    }
+
+    .slick-track {
+        display: flex;
+
+        .slick-slide {
+            height: auto;
+
+            > div {
+                height: 100%;
+
+                > div {
+                    height: 100%;
+                }
+            }
+        }
+    }
 }

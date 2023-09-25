@@ -5,14 +5,14 @@ const useScrollDirection = () => {
     const [show, setShow] = useState('show');
 
     useEffect(() => {
-        if(typeof window !== "undefined") {
+        if (typeof window !== 'undefined') {
             let previousScrollPosition = 0;
             let currentScrollPosition = 0;
-    
+
             window.addEventListener('scroll', function (e) {
                 // Get the new Value
                 currentScrollPosition = window.pageYOffset;
-    
+
                 // Subtract the two and conclude
                 if (previousScrollPosition - currentScrollPosition < 0) {
                     setShow('hide');
@@ -21,7 +21,7 @@ const useScrollDirection = () => {
                 } else if (previousScrollPosition - currentScrollPosition > 0) {
                     setShow('show');
                 }
-    
+
                 // Update the previous value
                 previousScrollPosition = currentScrollPosition;
             });
